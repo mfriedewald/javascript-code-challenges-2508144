@@ -1,9 +1,21 @@
 const rps = (p1, p2) => {
   // Write your code here
+  if (p1 === p2) return 0; // Unentschieden
 
+  // Prüfen auf Spieler 1 Sieg
+  if (
+    (p1 === 'rock' && p2 === 'scissors') ||
+    (p1 === 'scissors' && p2 === 'paper') ||
+    (p1 === 'paper' && p2 === 'rock')
+  ) {
+    return 1;
+  }
+
+  // Wenn keine Übereinstimmung für Spieler 1, gewinnt Spieler 2
+  return 2;
 }
 
-const { assert } = require('chai'); 
+const { assert } = require('chai');
 describe('Tests', () => {
   it("tests", () => {
     assert.equal(rps('rock', 'scissors'), 1);

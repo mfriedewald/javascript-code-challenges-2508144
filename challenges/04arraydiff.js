@@ -1,6 +1,6 @@
 function arrayDiff(a, b) {
   // Write your code here
-
+  return a.filter(item => !b.includes(item));
 }
 
 const { assert } = require('chai');

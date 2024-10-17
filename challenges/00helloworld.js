@@ -1,7 +1,7 @@
 function hello() {
   // Write your code here
-
-} 
+  return 'Hello world.';
+}
 
 
 const { assert } = require('chai');

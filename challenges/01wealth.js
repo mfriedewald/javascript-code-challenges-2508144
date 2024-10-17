@@ -1,6 +1,15 @@
 function redistributeWealth(wealth) {
   // Write your code here
+  if (wealth.length === 0) return []; // Falls das Array leer ist, gib ein leeres Array zurück
 
+  // Summe aller Elemente im Array berechnen
+  const sum = wealth.reduce((acc, num) => acc + num, 0);
+
+  // Durchschnitt berechnen
+  const average = sum / wealth.length;
+
+  // Ein Array mit der gleichen Anzahl an Elementen und dem Durchschnittswert zurückgeben
+  return Array(wealth.length).fill(average);
 }
 
 
