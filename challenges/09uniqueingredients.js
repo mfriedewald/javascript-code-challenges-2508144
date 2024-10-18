@@ -1,6 +1,18 @@
 function unique(ingredients) {
   // Write your code here
 
+  // Set wird benutzt, um Duplikate zu eliminieren
+  const allItems = new Set();
+
+  // Iteriere durch jedes Array und füge die Elemente zum Set hinzu
+  ingredients.forEach(subArray => {
+    subArray.forEach(item => {
+      allItems.add(item);
+    });
+  });
+
+  // Konvertiere das Set in ein Array und sortiere es alphabetisch
+  return Array.from(allItems).sort();
 }
 
 

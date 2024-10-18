@@ -1,6 +1,17 @@
-function uncensor(infected, remedy) {
-  // Write your code here
+function uncensor(censoredText, missingLetters) {
+  let result = '';
+  let letterIndex = 0;
 
+  for (let i = 0; i < censoredText.length; i++) {
+    if (censoredText[i] === '*') {
+      result += missingLetters[letterIndex];
+      letterIndex++;
+    } else {
+      result += censoredText[i];
+    }
+  }
+
+  return result;
 }
 
 
